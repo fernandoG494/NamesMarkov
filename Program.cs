@@ -7,9 +7,9 @@ namespace NamesMarkov
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("\t AAAAAAAAAAAAAAAAAAAAAAAAAA!");
+            Console.WriteLine("\t Names Generator!");
             LinesProvider provider = new LinesProvider();
-            string[] lines = provider.Lines();
+            string[] lines = provider.Lines("Elven");
 
             List<String> list = provider.Convert(lines);
 

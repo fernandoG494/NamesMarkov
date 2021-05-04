@@ -10,7 +10,7 @@ namespace NamesMarkov
         {
         }
 
-        public string[] Lines()
+        public string[] Lines(string names)
         {
             string basePath = AppContext.BaseDirectory;
             string[] split = basePath.Split('\\');
@@ -20,7 +20,7 @@ namespace NamesMarkov
                 path += split[i] + '\\';
             }
             
-            path += "Dictionary\\Draconic.txt";
+            path += "Dictionary\\" + names + ".txt";
             Console.WriteLine(path);
             string[] empty = { };
             if (File.Exists(path))
